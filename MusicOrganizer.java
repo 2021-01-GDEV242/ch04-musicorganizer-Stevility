@@ -17,7 +17,7 @@ public class MusicOrganizer
     // A reader that can read music files and load them as tracks.
     private TrackReader reader;
     
-    private Random sfle;
+    private Random shuffle;
     
     /**
      * Create a MusicOrganizer
@@ -123,8 +123,8 @@ public class MusicOrganizer
      public void shuffleTrack()
     {
         if(tracks.size() > 0) {
-           sfle = new Random();
-           int index = sfle.nextInt(tracks.size());
+           shuffle = new Random();
+           int index = shuffle.nextInt(tracks.size());
            playTrack(index);
         }
     }
