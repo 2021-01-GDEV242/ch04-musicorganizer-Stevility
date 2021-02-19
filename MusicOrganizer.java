@@ -120,7 +120,10 @@ public class MusicOrganizer
         }
     }
     
-     public void shuffleTrack()
+    /**Shuffle Track
+     * 
+     */
+    public void shuffleTrack()
     {
         if(tracks.size() > 0) {
            shuffle = new Random();
