@@ -16,6 +16,8 @@ public class MusicOrganizer
     // A reader that can read music files and load them as tracks.
     private TrackReader reader;
 
+    private Shuffle<> track;
+    
     /**
      * Create a MusicOrganizer
      */
@@ -117,6 +119,15 @@ public class MusicOrganizer
         }
     }
     
+     public void trackShuffle()
+    {
+        if(track.size() > 0) {
+           Shuffle Sfle = new Shuffle();
+           int index = Sfle.nextInt(track.size());
+           playTrack(index);
+        }
+    }
+    
     /**
      * Play the first track in the collection, if there is one.
      */
@@ -126,7 +137,7 @@ public class MusicOrganizer
             player.startPlaying(tracks.get(0).getFilename());
         }
     }
-    
+   
     /**
      * Stop the player.
      */
