@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+//Genrates the ability to randomise
+import java.util.Random;
 /**
  * A class to hold details of audio tracks.
  * Individual tracks may be played.
@@ -15,8 +16,8 @@ public class MusicOrganizer
     private MusicPlayer player;
     // A reader that can read music files and load them as tracks.
     private TrackReader reader;
-
-    private Shuffle<> track;
+    
+    private Random sfle;
     
     /**
      * Create a MusicOrganizer
@@ -119,11 +120,11 @@ public class MusicOrganizer
         }
     }
     
-     public void trackShuffle()
+     public void shuffleTrack()
     {
-        if(track.size() > 0) {
-           Shuffle Sfle = new Shuffle();
-           int index = Sfle.nextInt(track.size());
+        if(tracks.size() > 0) {
+           sfle = new Random();
+           int index = sfle.nextInt(tracks.size());
            playTrack(index);
         }
     }
